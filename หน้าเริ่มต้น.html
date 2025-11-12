@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าหลัก | Formula 1</title> 
+
+  <style>
+    /* โหลดฟอนต์ */
+    @font-face {
+      font-family: 'Starbirl';
+      src: url('Starbirl.otf') format('truetype');
+      font-display: swap;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {margin:0; padding:0; box-sizing:border-box;}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top:0;
+      z-index: 100;
+    }
+
+   header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ff1744;
+  text-shadow: 0 0 10px #ff1744, 0 0 20px #ff5252, 0 0 40px #ff1744;
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* เอฟเฟกต์เรืองแสงกระพริบเบา ๆ */
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px #ff1744,
+      0 0 20px #ff5252,
+      0 0 40px #ff1744,
+      0 0 80px #ff5252;
+  }
+  50% {
+    text-shadow: 
+      0 0 20px #ff5252,
+      0 0 40px #ff1744,
+      0 0 80px #ff5252,
+      0 0 120px #ff1744;
+  }
+}
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('รถบรื้นๆ.gif') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset:0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    /* 🌈 เอฟเฟกต์เรืองแสงเปลี่ยนสี */
+    .hero h2 {
+      font-family: 'Starbirl', sans-serif;
+      font-size: 72px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #ff1744, #ffeb3b, #00e5ff, #7c4dff, #ff1744);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 10s linear infinite;
+      text-shadow: 0 0 25px rgba(255,255,255,0.2);
+    }
+
+    @keyframes glowText {
+      0% {background-position: 0%;}
+      100% {background-position: 400%;}
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 0 10px #000;
+    }
+
+    .btn {
+      padding: 14px 40px;
+      background: linear-gradient(135deg,#ff1744,#ff5252);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(255,23,68,0.5);
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(255,23,68,0.7);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media(max-width:768px){
+      .hero h2 { font-size: 48px; }
+      .hero p { font-size: 16px; }
+      .btn { font-size: 16px; padding: 12px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <h1>Formula 1 Thailand</h1>
+
+    <nav>
+      <a href="หน้าหลัก2.html">หน้าหลัก</a>
+      <a href="login.html">เข้าสู่ระบบ</a>
+      <a href="หน้าหลัก2.html">ทีม & นักแข่ง</a>
+      <a href="https://www.formula1.com/">ข่าวสาร</a>
+      <a href="ติดต่อ.html">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Formula 1</h2>
+      <p>เปิดโลกความเร็วเหนือขีดจำกัด รู้จักทีมแข่ง นักขับ และกติกาของการแข่งขันที่เร็วที่สุดในโลก</p>
+      <button class="btn" onclick="location.href='หน้าหลัก2.html'">เริ่ม</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Formula 1 | เว็บไซต์ให้ความรู้เกี่ยวกับกีฬาฟอร์มูลาวัน
+  </footer>
+
+</body>
+</html>
